@@ -1,12 +1,5 @@
 const request = require("request");
-/**
- * Makes a single API request to retrieve the user's IP address.
- * Input:
- *   - A callback (to pass back an error or the IP string)
- * Returns (via Callback):
- *   - An error, if any (nullable)
- *   - The IP address as a string (null if error). Example: "162.245.144.188"
- */
+
 const fetchMyIP = (callback) => {
   // console.log("callback is:", callback);
   request('https://api.ipify.org/?format=json', (err, resp, body) => {
@@ -73,5 +66,3 @@ const nextISSTimesForMyLocation = function (callback) {
 }
 
 module.exports = nextISSTimesForMyLocation;
-
-// { latitude: '43.63830', longitude: '-79.43010' }
